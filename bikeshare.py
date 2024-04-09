@@ -133,11 +133,31 @@ def load_data(city, month, day):
         month_number = dt.datetime.strptime(month, "%B").month
         df = city_dataframe[city_dataframe['Start Time'].dt.month == month_number]
 #         print("DF after filter month", df)
-    # Filter the dataframe by week day if any
+    # Filter the dataframe by week day if any.
     if day != "all":
         df = city_dataframe[city_dataframe['Start Time'].dt.strftime('%A') == day.title()]
     return df
 
+
+def display_raw_data(df):
+    """Ask user to display the 5 rows of raw-data"""
+    start_index = 0
+    while start_index < len(df):
+        # Check the start index to ask user wanna see '5 lines' or 'next 5 lines' data
+        if start_index == 0:
+            should_display_data = input('\nWould you like to see 5 lines of raw data? Enter "yes" to continue or "no" to exit: ').lower()
+        else:
+            should_display_data = input('\nWould you like to see next 5 lines of raw data? Enter "yes" to continue or "no" to exit: ').lower()
+            
+        if should_display_data == 'yes':
+            print(df.iloc[start_index:start_index + 5])
+            start_index += 5
+        elif should_display_data == 'no':
+            print("\nExiting program.")
+            break
+        else:
+            print("Invalid input. Please enter 'yes' or 'no'.")
+        
 
 def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
@@ -263,6 +283,9 @@ def main():
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
+        
+        # Display raw data
+        display_raw_data(df)
 
         time_stats(df)
         station_stats(df)
