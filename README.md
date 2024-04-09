@@ -21,7 +21,7 @@ By leveraging Python libraries like Pandas, Numpy, general third party, we provi
 - Terminal application
 
 ## Datasets
-In this project, the data provided by [Motivate](https://www.motivateco.com/), a bike share system provider for many major cities in the United States, to uncover bike share usage patterns. We will compare the system usage between three large cities: Chicago, New York City, and Washington, DC.
+In this project, the data provided by [Motivate](https://www.motivateco.com/), a bike share system provider for many major cities in the United States, to uncover bike share usage patterns. We will compare the system usage between three large cities: Chicago, New York City, and Washington, DC. The data contains randomly the first six months of 2017 for both three cities.
 * The data files for three cities above include some same columns:
     - Start Time
     - End Time
