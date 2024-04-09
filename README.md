@@ -20,6 +20,9 @@ By leveraging Python libraries like Pandas, Numpy, general third party, we provi
 - Visual Studio Code editor
 - Terminal application
 
+## Datasets
+In this project, the data provided by [Motivate](https://www.motivateco.com/), a bike share system provider for many major cities in the United States, to uncover bike share usage patterns. We will compare the system usage between three large cities: Chicago, New York City, and Washington, DC.
+
 ### References
 - https://www.w3schools.com/python/python_intro.asp: References for python research
 - https://www.w3schools.com/python/pandas/default.asp: References for Pandas research
