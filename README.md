@@ -1,5 +1,3 @@
->**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
-
 ### Date created
 Tuesday, 09 April 2024
 
@@ -22,7 +20,7 @@ By leveraging Python libraries like Pandas, Numpy, general third party, we provi
 
 ## Datasets
 In this project, the data provided by [Motivate](https://www.motivateco.com/), a bike share system provider for many major cities in the United States, to uncover bike share usage patterns. We will compare the system usage between three large cities: Chicago, New York City, and Washington, DC. The data contains randomly the first six months of 2017 for both three cities.
-* The data files for three cities above include some same columns:
+* The data files for three cities above include 6 same columns:
     - Start Time
     - End Time
     - Trip Duration
