@@ -262,6 +262,12 @@ def user_stats(df):
         print("Gender stats cannot be calculated because some errors occurred")
 
     # Display earliest, most recent, and most common year of birth.
+    user_stats_birth_year(df)
+
+    print("\nThis took %s seconds." % (time.time() - start_time))
+    print('-'*40)
+
+def user_stats_birth_year(df):
     try:
         # Get earliest birth year.
         earliest_birth_year = int(df['Birth Year'].min())
@@ -274,10 +280,6 @@ def user_stats(df):
         print("Year of birth stats cannot be calculated because Birth Year does not appear in the dataframe")
     except:
         print("Year of birth stats cannot be calculated because some errors occurred")
-
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
-
 
 def main():
     while True:
